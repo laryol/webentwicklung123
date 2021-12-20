@@ -2,40 +2,27 @@
 //const cors = require('cors')
 
 function abfrage2() {
-    window.alert("eqredq")
+    window.alert("alert1")
     const form = document.querySelector('form')
-
     const email = document.querySelector('[name=email]')
     const password = document.querySelector('[name=password]')
 
     const loginError = document.querySelector('.error')
 
-    const BASE_URL = "https://webtechbackend.herokuapp.com"
+    const BASE_URL = "https://webentwicklungbe.herokuapp.com"
 
     const login = async (email, password) => {
-/*
-        if (email === "huehne@htw-berlin.de" && password === "hunter2") {
-            window.alert("yes!")
-            return true;
-        }
-        return false;
-        */
-
-
-        const loginUrl = `${BASE_URL}/seeds/initial_user.ts`
-    // if email==huehne return true
+        const loginUrl = `${BASE_URL}/login`
         const result = await fetch(loginUrl, {
 
             method: 'Post',
             mode: 'cors',
-            headers:{
+            headers: {
                 'Content-Type': 'application/json'
             },
-
             body: JSON.stringify({email, password})
         });
-        return result.status===200;
-
+        return result.status === 200;
     }
     form.addEventListener('submit', (event) => {
         event.preventDefault();
@@ -49,5 +36,4 @@ function abfrage2() {
                 }
             })
     })
-
 }

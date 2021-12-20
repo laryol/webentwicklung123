@@ -9,7 +9,7 @@ function abfrage() {
             window.location = "Startseite_nach_Login.html"
 
         }), 500;
-    //    window.location = "Startseite_nach_Login.html"
+        //    window.location = "Startseite_nach_Login.html"
         window.alert("Login erfolgreich")
     } else {
         window.alert((pwInput.value))
