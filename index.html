@@ -6,8 +6,6 @@
     <title>Login</title>
     <script src="javaScript1.js"></script>
     <script src="javaS_Backend.js"></script>
-    <script type="text/javascript" src="node_modules/vue/dist/vue.js"></script>
-    <script type="text/javascript" src="node_modules/axios/dist/axios.js"></script>
 
 
 </head>
@@ -32,46 +30,14 @@
             <!--<input type="submit" onclick=login("huehne@htw-berlin.de","hunter2")> -->
 
         </div>
-        <button type=submit onclick="abfrage2()">Einloggen</button>
+        <button type=submit onclick="abfrage()">Einloggen</button>
     </form>
 
 </div>
-<!--
-<div id="app">
-    <textarea v-model="src"></textarea>
-</div>
--->
-<script type="text/javascript">
-    new Vue({
-        el: '#app',
-        data: {
-            src: ''
-        },
-        mounted(){
-            var vm = this
-            axios.get('https://webtechbackend.herokuapp.com/api',{headers: {'Access-Control-Allow-Origin': '*'}})
-                .then(data => {
-                    vm.src = JSON.stringify(data.data)
-                })
-        }
-    })
-</script>
-<!--
-<script> fetch("getUsersTest.php").then(response => {
-    return response.json();
-}).then(users => {
-    console.log("??")
-    console.log(users);
-    window.alert("2");
 
-});
-
-</script>
--->
 <div>
     <footer class="c_footer">Impressum & Datenschutzerklärung</footer>
 </div>
-
 
 
 </body>
